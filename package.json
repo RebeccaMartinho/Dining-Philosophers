@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node main.js"
   },
-  "author": "Marcos Kropp",
+  "author": ["Marcos Kropp", "Rebecca Martinho", "Luan Bruno"],
   "license": "ISC",
   "dependencies": {
     "faker": "^4.1.0"

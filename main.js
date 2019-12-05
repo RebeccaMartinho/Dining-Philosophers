@@ -71,15 +71,12 @@ function init() {
               let left;
               let right;
               if (j === 0) {
-                // first
                 left = philosophers[lastIndex];
                 right = philosophers[j + 1];
               } else if (j === lastIndex) {
-                // last
                 left = philosophers[j - 1];
                 right = philosophers[0];
               } else {
-                // common
                 left = philosophers[j - 1];
                 right = philosophers[j + 1];
               }
@@ -97,29 +94,26 @@ function init() {
       let right;
 
       if (index === 0) {
-        // first
         left = philosophers[lastIndex];
         right = philosophers[index + 1];
       } else if (index === lastIndex) {
-        // last
         left = philosophers[index - 1];
         right = philosophers[0];
       } else {
-        // common
         left = philosophers[index - 1];
         right = philosophers[index + 1];
       }
 
       if (now + timeToWait < new Date().getTime()) {
         switch (newAction) {
-          case actions[think]: // think
+          case actions[think]:
             console.log(philosophers[index], actions[eat]);
             if (philosophers[index].action === actions[eat]) {
               console.log("top");
               philosophers[index].action = actions[think];
             }
             break;
-          case actions[eat]: // eat
+          case actions[eat]:
             if (left.action === actions[eat] || right.action === actions[eat]) {
               if (
                 !hungry.find(philosopher => {

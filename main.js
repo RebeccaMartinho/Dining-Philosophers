@@ -9,6 +9,7 @@ const eat = 1;
 
 const actions = ["think", "eat"];
 
+//array de filosofos
 let philosophers = [
   {
     name: "Filosofo 1",
@@ -56,6 +57,7 @@ const showPhilosophers = () => {
   });
 };
 
+//função inicial
 function init() {
   const lastIndex = philosophers.length - 1;
   for (;;) {
